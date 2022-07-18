@@ -8,7 +8,7 @@ export type GeneratorConfig = {
   utilitiesFolderPath: Maybe<string>;
 };
 
-export const resolveConfig = async (path = "./fe-generator.config.json") => {
+export const resolveConfig = async (path = "./ew-react-gen.config.json") => {
   const configPath = resolve(process.cwd(), path);
 
   const config: GeneratorConfig = await pathExists(configPath).then(

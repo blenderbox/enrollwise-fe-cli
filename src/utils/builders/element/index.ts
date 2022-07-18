@@ -2,6 +2,7 @@ import { capitalize } from "../../common";
 import { appendFile, outputFile, pathExists, readFile } from "fs-extra";
 import {
   elementIndexTemplate,
+  elementStoryTemplate,
   elementTemplate,
   elementTestTemplate,
 } from "../../../templates";
@@ -18,7 +19,7 @@ export const buildElement = async (
   path: string,
   params: BuildElementParams = {}
 ) => {
-  const { props, style, tests } = params;
+  const { props, story, style, tests } = params;
 
   const elementIndexPath = `${path}/${capitalize(elementName)}/index.ts`;
 
@@ -42,6 +43,18 @@ export const buildElement = async (
 
     outputs.push(
       outputFile(elementTestsPath, elementTestTemplate(elementName), {
+        encoding: "utf-8",
+      })
+    );
+  }
+
+  if (story) {
+    const componentStoryPath = `${path}/${capitalize(elementName)}/${capitalize(
+      elementName
+    )}.stories.tsx`;
+
+    outputs.push(
+      outputFile(componentStoryPath, elementStoryTemplate(elementName, props), {
         encoding: "utf-8",
       })
     );

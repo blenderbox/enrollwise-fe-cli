@@ -19,7 +19,9 @@ export const elementTemplate = (
     props ? `${elementPropsTemplate(elementName)}\n` : ""
   }export const ${capitalize(elementName)} = (${
     props ? `props: ${elementPropsTypeName(elementName)}` : ""
-  }) => {};\n`;
+  }) => {
+  return null;
+};\n`;
 
 export const elementIndexTemplate = (elementName: string) =>
   `export * from "./${capitalize(elementName)}";\n`;

@@ -19,7 +19,9 @@ export const componentTemplate = (
     props ? `${componentPropsTemplate(componentName)}\n` : ""
   }export const ${capitalize(componentName)} = (${
     props ? `props: ${componentPropsTypeName(componentName)}` : ""
-  }) => {};\n`;
+  }) => {
+    return null;
+};\n`;
 
 export const componentIndexTemplate = (componentName: string) =>
   `export * from "./${capitalize(componentName)}";\n`;
