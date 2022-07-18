@@ -6,7 +6,7 @@ Enrollwise CLI for React code generation.
 
 You can install CLI either globally or locally.
 
-To install globally run `yarn global add enrollwise-fe-cli` or `npm i -g enrollwise-fe-cli`;
+To install globally run `yarn global add enrollwise-fe-cli` or `npm i -g enrollwise-fe-cli`.
 
 To install locally run `yarn add -D enrollwise-fe-cli` or `npm i --save-dev enrollwise-fe-cli` in the root of your project.
 
@@ -34,6 +34,18 @@ If you've installed CLI locally, update your package.json `scripts` property:
 If you've installed CLI locally you will need to call commans using your package manager of choise, for example:
 
 `yarn ew-react-codegen component foo --props --tests` or `npm ew-react-codegen component foo --props --tests`
+
+### Local setup
+
+If you want to contribute or just simply try it out, follow these steps:
+
+1. Clone the repo: `git@github.com:blenderbox/enrollwise-fe-cli.git`
+2. Install dependecies: `yarn install` or `npm install`
+3. Install correct node version: `nvm use`
+4. Run build: `yarn build` or `npm run build`
+5. Globally link the package: `npm link`
+
+This will create a global symlink to the CLI. Now you're able to use the `ew-react-codegen` command in your terminal.
 
 Congratulations! You're ready to use commands and generate code!
 
