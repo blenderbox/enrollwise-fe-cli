@@ -1,16 +1,16 @@
 import { capitalize } from "../../utils/common";
 
-export const hookPropsTypeName = (hookName: string) =>
-  `${capitalize(hookName)}Props`;
+export const hookParamsTypeName = (hookName: string) =>
+  `${capitalize(hookName)}Params`;
 
 export const hookPropsTemplate = (hookName: string) =>
-  `export type ${hookPropsTypeName(hookName)} = {};\n`;
+  `export type ${hookParamsTypeName(hookName)} = {};\n`;
 
-export const hookTemplate = (hookName: string, props = false) =>
+export const hookTemplate = (hookName: string, params = false) =>
   `${
-    props ? `${hookPropsTemplate(hookName)}\n` : ""
+    params ? `${hookPropsTemplate(hookName)}\n` : ""
   }export function ${hookName}(${
-    props ? `props: ${hookPropsTypeName(hookName)}` : ""
+    params ? `params: ${hookParamsTypeName(hookName)}` : ""
   }){};\n`;
 
 export const hookIndexTemplate = (hookName: string) =>

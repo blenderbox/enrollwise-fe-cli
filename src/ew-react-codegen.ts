@@ -14,8 +14,8 @@ import {
 
 resolveConfig().then(async (config) => {
   program
-    .name("ew-react-gen")
-    .description("CLI to create React components and utilities")
+    .name("ew-react-codegen")
+    .description("Enrollwise CLI for React code generation.")
     .version("1.0.0");
 
   program
@@ -68,9 +68,9 @@ resolveConfig().then(async (config) => {
 
   program
     .command("hook")
-    .description("Creates new hook with optional props and tests")
+    .description("Creates new hook with optional parameters and tests")
     .argument("<name>", "Hook name")
-    .option("--props", "Add props to the hook")
+    .option("--params", "Add params to the hook")
     .option("--tests", "Add tests to the hook")
     .action(async (name: string, opts: BuildHookParams) => {
       if (!new RegExp(/^(use)([\w\d])+/g).test(name)) {
@@ -88,7 +88,7 @@ resolveConfig().then(async (config) => {
 
   program
     .command("utility")
-    .description("Creates new utility with optional props and tests")
+    .description("Creates new utility with optional parameters and tests")
     .argument("<name>", "Utility name")
     .option("--params", "Add params to the utility")
     .option("--tests", "Add tests to the utility")

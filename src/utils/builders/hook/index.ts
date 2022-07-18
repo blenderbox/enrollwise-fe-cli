@@ -7,7 +7,7 @@ import {
 } from "../../../templates";
 
 export type BuildHookParams = {
-  props?: boolean;
+  params?: boolean;
   tests?: boolean;
 };
 
@@ -16,7 +16,7 @@ export const buildHook = async (
   path: string,
   params: BuildHookParams = {}
 ) => {
-  const { props, tests } = params;
+  const { params: hookParams, tests } = params;
 
   const hookIndexPath = `${path}/${hookName}/index.ts`;
 
@@ -26,7 +26,7 @@ export const buildHook = async (
     outputFile(hookIndexPath, hookIndexTemplate(hookName), {
       encoding: "utf-8",
     }),
-    outputFile(hookFilePath, hookTemplate(hookName, props), {
+    outputFile(hookFilePath, hookTemplate(hookName, hookParams), {
       encoding: "utf-8",
     }),
   ];

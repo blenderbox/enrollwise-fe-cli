@@ -1,7 +1,7 @@
 {
   "author": "Blenderbox",
   "bin": {
-    "ew-react-gen": "./bin/ew-react-gen.js"
+    "ew-react-codegen": "./bin/ew-react-codegen.js"
   },
   "dependencies": {
     "commander": "^9.4.0",
@@ -19,7 +19,8 @@
     "prettier": "^2.0.4",
     "typescript": "^4.6.4"
   },
-  "keywords": ["enrollwise-fe-cli", "ew-react-gen"],
+  "description": "Enrollwise CLI for React code generation.",
+  "keywords": ["enrollwise-fe-cli", "ew-react-codegen"],
   "license": "MIT",
   "main": "dist/index.js",
   "name": "enrollwise-fe-cli",
