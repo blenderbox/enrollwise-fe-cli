@@ -1,0 +1,39 @@
+{
+  "author": "Blenderbox",
+  "bin": {
+    "ew-react-gen": "./bin/ew-react-gen.js"
+  },
+  "dependencies": {
+    "commander": "^9.4.0",
+    "fs-extra": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.0.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.0.4",
+    "typescript": "^4.6.4"
+  },
+  "keywords": ["enrollwise-fe-cli", "ew-react-gen"],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "enrollwise-fe-cli",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:blenderbox/enrollwise-fe-cli.git",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .ts ./src",
+    "lint:fix": "eslint --fix  --ext .ts ./src",
+    "prepare": "tsc",
+    "watch": "tsc --watch"
+  },
+  "version": "1.0.0"
+}
