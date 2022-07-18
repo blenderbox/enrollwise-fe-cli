@@ -31,7 +31,7 @@ If you've installed CLI locally, update your package.json `scripts` property:
   }
 ```
 
-If you've installed CLI locally you will need to call commans using your package manager of choise, for example:
+If you've installed CLI locally you will need to call commands using your package manager of choise, for example:
 
 `yarn ew-react-codegen component foo --props --tests` or `npm ew-react-codegen component foo --props --tests`
 
@@ -64,7 +64,7 @@ CLI exposes following commands:
 
 Creates new component with optional props, tests, stories and styles
 
-Accepts followind options:
+Accepts following options:
 
 - `--props` - Add props to the component
 - `--story` - Add story to the component
@@ -75,7 +75,7 @@ Accepts followind options:
 
 Creates new element with optional props, tests, stories and styles
 
-Accepts followind options:
+Accepts following options:
 
 - `--props` - Add props to the element
 - `--story` - Add story to the element
@@ -86,7 +86,7 @@ Accepts followind options:
 
 Creates new hook with optional props and tests
 
-Accepts followind options:
+Accepts following options:
 
 - `--props` - Add props to the hook
 - `--tests` - Add tests to the hook
@@ -95,7 +95,7 @@ Accepts followind options:
 
 Creates new utility with optional parameters and tests
 
-Accepts followind options:
+Accepts following options:
 
 - `--params` - Add params to the utility"
 - `--tests` - Add tests to the utility"
